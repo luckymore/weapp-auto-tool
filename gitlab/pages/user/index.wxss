@@ -1,0 +1,1 @@
+.k-l-list__item label {position:absolute; left:auto; top:50%; margin-left:8px; padding:0 4px; font-size:10px; color:#fff; background:#bf9f73; -webkit-transform:translate(0, -50%); transform:translate(0, -50%); border-radius:2px;}

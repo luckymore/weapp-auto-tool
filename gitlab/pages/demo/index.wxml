@@ -1,0 +1,23 @@
+<view class="k-l-list">
+  <view class="k-l-list__item">列表</view>
+  <view class="k-l-list__item">标签</view>
+  <view class="k-l-list__item">摇一摇</view>
+  <view class="k-l-list__item">小程序</view>
+</view>
+
+<view class="k-l-list">
+  <view class="k-l-list__item">朋友圈</view>
+  <view class="k-l-list__item">扫一扫</view>
+  <view class="k-l-list__item">摇一摇</view>
+  <view class="k-l-list__item">小程序</view>
+</view>
+
+<view class="k-l-list k-l-list_icon">
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_icon" style="background-image:url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9fb889f9ab62f56837b22987eb6e6b04.png);"></view>
+    <text>朋友圈</text>
+  </view>
+  <view class="k-l-list__item">扫一扫</view>
+  <view class="k-l-list__item">摇一摇</view>
+  <view class="k-l-list__item">小程序</view>
+</view>

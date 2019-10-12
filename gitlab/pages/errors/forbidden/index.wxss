@@ -1,0 +1,40 @@
+/* @import "../../../styles/guide.wxss"; */
+
+.black {
+  color: black;
+}
+
+.list {
+  height: auto;
+  width: 100%;
+  background: #fff;
+  padding: 0 40rpx;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  transition: all 300ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.list-item {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  word-break: break-all;
+  color: #007aff;
+}
+
+.list-item:first-child {
+  border-top: none;
+}

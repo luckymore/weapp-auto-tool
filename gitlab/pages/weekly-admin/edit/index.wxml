@@ -1,0 +1,15 @@
+<view class="k-l-list">
+  <view class="k-l-list__item k-l-list__item_gray">
+    周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容
+  </view>
+</view>
+
+<view class="k-l-list k-l-list_noactive">
+  <view class="k-l-list__item">
+    <textarea maxlength="-1" auto-height>周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周</textarea>
+  </view>
+  <view class="k-l-list__item k-p-item_2">
+    <textarea maxlength="-1">周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周报内容周</textarea>
+  </view>
+  <view class="k-l-list__item"></view>
+</view>

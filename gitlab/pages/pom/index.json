@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "舆情监控",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+  }
+}

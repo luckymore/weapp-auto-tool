@@ -1,0 +1,2 @@
+.k-l-list__item text text {margin-left:8px; font-size:14px; color:#888;}
+.k-l-list__item label {position:absolute; right:32px; top:50%; font-size:14px; color:#888; -webkit-transform:translate(0, -50%); transform:translate(0, -50%);}

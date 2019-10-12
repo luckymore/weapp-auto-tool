@@ -1,0 +1,22 @@
+<!-- <page title="神秘地带" background-color="#FFFFFF" custom-body-class="body">
+  <view class="container">
+    <view class="list">
+      <view class="list-item">
+        <text class="black">抱歉，您没有访问当前页面的权限！</text>
+      </view>
+      <view class="list-item">
+        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权</button>
+      </view>
+    </view>
+  </view>
+</page> -->
+
+<view>
+  <open-data type="userAvatarUrl" style="display:block;margin:64px auto 16px;width:80px;height:80px;border-radius:50%;overflow:hidden;"></open-data>
+  <open-data type="userNickName" style="display:block;font-size:16px;text-align:center;"></open-data>
+  <view style="padding:16px 32px;">
+    <text style="display:block;margin:4px 0;font-size:16px;">该小程序由小米公司开发，请提供以下授权</text>
+    <text style="display:block;margin:4px 0;font-size:14px;color:#888;">· 获得你的公开信息（昵称、头像等）</text>
+  </view>
+  <button type="primary" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权</button>
+</view>

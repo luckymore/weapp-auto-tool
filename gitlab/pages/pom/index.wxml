@@ -1,0 +1,86 @@
+<!-- 标签 -->
+<view class="k-w-tab">
+  <view wx:for-items="{{legends}}" wx:key="{{item.id}}" data-id="{{item.id}}" class="{{activeTab.id === item.id ? 'on' : ''}}" data-index="{{index}}" data-time="{{lastTapTime}}" bindtap="changeTab">
+    {{item.legend}}
+  </view>
+</view>
+<view class="k-w-tab-placeholder"></view>
+
+<!-- 选择区域 -->
+<view class="k-p-panel" wx:for-items="{{legends}}" wx:key="{{item.id}}" style="{{item.id === activeTab.id ? '' : 'display:none;'}}">
+  <text>{{item.description}}</text>
+  <picker class="time picker" bindchange="bindPickerChange" value="{{pickers[index].index}}" range-key="value" range="{{periods[index]}}">
+    {{periods[index][pickers[index].index].value}}
+  </picker>
+  <block wx:if="{{item.legend === '口碑榜'}}">
+    <view class="koubei" bindtap="getListInOrderOfNegativeReputation" wx:if="{{body[index].isFavorable === 1}}">最佳榜</view>
+    <view class="koubei koubei_down" bindtap="getListInOrderOfFavorableReputation" wx:else>最差榜</view>
+  </block>
+</view>
+<view class="k-p-panel-placeholder"></view>
+
+<!-- 列表 -->
+<scroll-view scroll-y wx:for-items="{{body}}" scroll-top="{{part.scrollTop}}" wx:key="{{part.id}}" wx:for-item="part" style="{{part.id === activeTab.id ? 'height: ' + (windowHeight-76) + 'px' : 'display:none;'}}" lower-threshold="150" bindscrolltolower="scrollToBottom">
+  <view class="k-l-list k-p-rank">
+
+    <view class="k-l-list__item k-l-list__item_gray{{item.bubbleIsVisible?' active':''}}" wx:for-items="{{part.stickies}}" wx:key="{{item.id}}" wx:for-item="item" data-id="{{item.id}}" data-index="{{index}}" bindtap="navigateToDetail" data-source="stickies" bind:longpress="togglePopBubble">
+      <view class="k-p-rank__item">
+        <text class="i i_sticktop"></text>
+        <view class="keyword">{{item.keywords}}</view>
+        <!-- <view class="icon icon_hot" wx:if="{{part.legend !== '口碑榜'}}">{{item.popularIndex}}</view>
+        <view class="icon icon_up" wx:else>{{item.like}}</view> -->
+        <view class="icon icon_hot" wx:if="{{part.legend === '话题榜'}}">{{item.popularIndex}}</view>
+        <view class="icon {{item.upTo>0?'icon_up':'icon_down'}}" wx:elif="{{part.legend === '飙升榜'}}">{{item.upTo>0?item.upTo:-item.upTo}}</view>
+        <view class="icon {{part.isFavorable === 0 ? 'icon_no' : 'icon_yes'}}" wx:elif="{{part.legend === '口碑榜'}}">
+          {{part.isFavorable === 0 ? item.unlike : item.like}}
+        </view>
+      </view>
+
+      <view class="k-w-list-bubble {{item.bubbleIsVisible?'k-w-list-bubble_showed':''}}" style="left: {{item.left}}px" catchtap="cancel">
+        <text catchtap="editTopic" data-id="{{item.id}}" data-id="{{item.id}}" data-source="stickies" data-index="{{index}}">编辑话题</text>
+        <text catchtap="unstickTopic" data-id="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}">取消置顶</text>
+        <text catchtap="hideTopic" data-id="{{item.id}}" data-id="{{item.id}}" data-source="stickies" data-index="{{index}}">隐藏</text>
+      </view>
+      <view class="k-w-list-bubble-mask {{item.bubbleIsVisible?'k-w-list-bubble-mask_showed':''}}" data-id="{{item.id}}" data-source="stickies" catchtap="togglePopBubble" data-index="{{index}}"></view>
+
+    </view>
+
+    <view class="k-l-list__item{{item.bubbleIsVisible?' active':''}}" wx:for-items="{{part.items}}" wx:key="{{item.id}}" wx:for-item="item" data-id="{{item.id}}" bindtap="navigateToDetail" data-source="items" data-index="{{index}}" bind:longpress="togglePopBubble">
+      <view class="k-p-rank__item">
+        <text class="i {{index+1<4 ? 'i_top3' : ''}}">{{index+1}}</text>
+        <view class="keyword">{{item.keywords}}</view>
+          <view class="icon icon_hot" wx:if="{{part.legend === '话题榜'}}">{{item.popularIndex}}</view>
+          <view class="icon {{item.upTo>0?'icon_up':'icon_down'}}" wx:elif="{{part.legend === '飙升榜'}}">{{item.upTo>0?item.upTo:-item.upTo}}</view>
+          <view class="icon {{part.isFavorable === 0 ? 'icon_no' : 'icon_yes'}}" wx:elif="{{part.legend === '口碑榜'}}">
+            {{part.isFavorable === 0 ? item.unlike : item.like}}
+          </view>
+        <!-- <view class="icon icon_up" wx:else>{{item.like}}</view> -->
+      </view>
+
+      <view class="k-w-list-bubble {{item.bubbleIsVisible?'k-w-list-bubble_showed':''}}" style="left: {{item.left}}px" catchtap="cancel">
+        <text catchtap="editTopic" data-id="{{item.id}}" data-id="{{item.id}}" data-source="items" data-index="{{index}}">编辑话题</text>
+        <text catchtap="stickTopic" data-id="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}">置顶</text>
+        <text catchtap="hideTopic" data-id="{{item.id}}" data-id="{{item.id}}" data-source="items" data-index="{{index}}">隐藏</text>
+      </view>
+      <view class="k-w-list-bubble-mask {{item.bubbleIsVisible?'k-w-list-bubble-mask_showed':''}}" data-id="{{item.id}}" data-source="items" catchtap="togglePopBubble" data-index="{{index}}"></view>
+    </view>
+  </view>
+
+  <view class="k-w-loading" style="{{isLoadingData && part.id === activeTab.id ? '' : 'display:none;'}}">
+    <view>
+      <view></view>
+      <text>加载中...</text>
+    </view>
+  </view>
+
+  <!-- 管理员入口 -->
+  <view class="k-p-admin-btn" wx:if="{{hasManagementPermission}}">
+    <view>
+      <navigator url="./addword/index">添加新话题</navigator>
+      <navigator url="./list/index">查看已隐藏</navigator>
+    </view>
+  </view>
+
+  <!-- 刷新按钮 -->
+  <view class="k-p-refresh-btn" bindtap="init"></view>
+</scroll-view>

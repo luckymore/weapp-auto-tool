@@ -1,0 +1,33 @@
+<view class="k-l-list-title">{{ title }}</view>
+<form bindsubmit="handleSumit">
+  <view class="k-l-list k-p-weekly-form">
+    <view wx:for="{{reports}}" wx:key="{{item + index}}" class="k-l-list__item k-l-list__item_noactive">
+      <textarea
+        name="{{index}}"
+        value="{{item}}"
+        maxlength="-1"
+        disabled="{{isPreview}}"
+        placeholder="填写一项工作"
+        data-index="{{index}}"
+        bindblur="handleBlur"
+      />
+    </view>
+    <view wx:if="{{reports.length < 10 && !isPreview}}" class="k-l-list__item" bind:tap="handleAdd">
+      <view class="k-p-weekly-form_add-item">添加一项</view>
+    </view>
+
+    <!-- 附件 -->
+    <view
+      wx:if="{{isPreview && attachs.length || !isPreview}}"
+      bindtap="handleGoAttach"
+      class="k-l-list__item k-l-list__item_arrow"
+    >
+      <view class="k-p-weekly-form_add-attachment">
+        {{ attachs.length ? attachs.length + '个附件' : isPreview ? '查看附件' : '添加附件' }}
+      </view>
+    </view>
+  </view>
+  <button wx:if="{{!isPreview}}" formType="submit" type="primary">{{btnText}}</button>
+</form>
+
+<navigator wx:if="{{!isPreview && history > 0}}" url="/pages/weekly/list/index" class="k-p-weekly-view-history">查看往期周报</navigator>

@@ -1,0 +1,103 @@
+/* .k-p-attachment-list */
+.k-p-attachment-list {
+  padding: 8px auto;
+  background: #fff;
+  text-align: center;
+}
+.k-p-attachment-list > view {
+  display: inline-block;
+  width: 354px;
+}
+.k-p-attachment-list > view > view {
+  position: relative;
+  float: left;
+  margin: 4px;
+  width: 110px;
+  height: 110px;
+  line-height: 110px;
+  background: #f2f2f2;
+}
+.k-p-attachment-list > view > view:active {
+  background-color: #ededed;
+}
+.k-p-attachment-list .pic {
+  display: flex;
+  align-items: center;
+  /* background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat; */
+}
+.k-p-attachment-list .file view {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.k-p-attachment-list .file view::before {
+  content: '';
+  display: block;
+  margin: 0 auto 8px;
+  width: 32px;
+  height: 32px;
+  background-size: 100% 100%;
+}
+.k-p-attachment-list .file_doc view::before,
+.k-p-attachment-list .file_docx view::before {
+  background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8e84b2faf38f0f7610738148e9a2a366.png);
+}
+.k-p-attachment-list .file_xls view::before,
+.k-p-attachment-list .file_xlsx view::before {
+  background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/57d249c2b405d7b4b37ec80da1ef20b5.png);
+}
+.k-p-attachment-list .file_ppt view::before,
+.k-p-attachment-list .file_pptx view::before {
+  background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0e8c91f33761f770115db0b982f1647e.png);
+}
+.k-p-attachment-list .file_pdf view::before {
+  background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00c750a720d5506261d32fac8e669929.png);
+}
+.k-p-attachment-list .file_txt view::before {
+  background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/66d875b3ad943868d2397affd6bf476f.png);
+}
+.k-p-attachment-list .file_unknow view::before {
+  background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6eee56c4558fbe6777bf6a8dccd61bb0.png);
+}
+.k-p-attachment-list .file text {
+  display: -webkit-box;
+  padding: 4px;
+  font-size: 12px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  word-break: break-all;
+}
+.k-p-attachment-list .add::before {
+  content: '\e90b';
+  font-family: 'k-icon';
+  font-size: 32px;
+  color: #888;
+}
+.loading {
+  position: relative;
+  /* background: rgba(0, 0, 0, 0.4)!important; */
+}
+.loading::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4) url(https://media0.giphy.com/media/10kTz4r3ishQwU/giphy.gif?cid=790b76116c6770d7abbaf77dc2faac82241bf22529d40543&rid=giphy.gif) no-repeat;
+  background-size: 25px 25px;
+  background-position: center;
+}
+.img-item {
+  height: 100%;
+}

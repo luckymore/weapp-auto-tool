@@ -1,0 +1,11 @@
+<view scroll-y bind:scrolltolower="handleScrolltolower" class="k-l-list k-l-list_arrow">
+  <view
+    wx:for="{{list}}"
+    wx:key="{{item.report_id}}"
+    data-id="{{item.report_id}}"
+    class="k-l-list__item"
+    bind:tap="handleGo"
+  >
+    <text>{{item.title}}</text>
+  </view>
+</view>

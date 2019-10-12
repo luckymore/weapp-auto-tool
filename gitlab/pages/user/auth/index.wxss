@@ -1,0 +1,5 @@
+.k-l-list__item switch,
+.k-l-list__item radio,
+.k-l-list__item .radio {position:absolute; top:50%; right:16px; -webkit-transform:translate(0, -50%); transform:translate(0, -50%);}
+.k-l-list__item .radio {width:24px; height:24px; background:#fff; box-sizing:border-box; border:1px solid #d1d1d1; border-radius:50%; overflow:hidden;}
+.k-l-list__item .radio_on {border:0; background-image:url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/17e7071879cbd74cd47ba6528bbeab47.png); background-size:100% 100%;}

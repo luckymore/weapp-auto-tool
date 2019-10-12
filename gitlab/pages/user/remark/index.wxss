@@ -1,0 +1,2 @@
+.k-l-list__item input {width:300px;}
+.k-l-list__item icon {position:absolute; top:50%; right:16px; -webkit-transform:translate(0, -50%); transform:translate(0, -50%);}

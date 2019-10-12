@@ -1,0 +1,6 @@
+<view class="k-l-list">
+  <navigator url="/pages/signin/detail/index" class="k-l-list__item">
+    <text>互联网部门拉通会 - 第三期<text>10.19(六) 13:00-19:00</text></text>
+    <label>进行中</label>
+  </navigator>
+</view>

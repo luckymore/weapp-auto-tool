@@ -1,0 +1,25 @@
+<view wx:for="{{listData}}" wx:for-item="item" wx:key="index" wx:for-index="index">
+  <view class="k-l-list-title">
+    {{item.title}} </view>
+  <view class="k-l-list k-l-list_noactive">
+    <view class="k-l-list__item" wx:for="{{item.permission}}" wx:for-item="itemPer" wx:for-index="indexPer" wx:key="">
+      <text style="color:{{itemPer.perm==='manager'?'#09bb07':'#000'}};">{{itemPer.name}}</text>
+      <!-- <switch checked="{{itemPer.is_able}}" bindchange="switch1Change"  /> -->
+      <view class="radio  {{itemPer.is_able?'radio_on':''}}" data-module="{{index}}" data-per="{{indexPer}}"  bindtap="switch1Change"></view>
+    </view>
+  </view>
+</view>
+<!-- <view class="k-l-list-title">舆情监控</view>
+<view class="k-l-list k-l-list_noactive">
+  <view class="k-l-list__item">
+    <text>允许访问</text>
+    <switch checked />
+  </view>
+  <view class="k-l-list__item">
+    <text>管理权限</text>
+    <switch />
+  </view>
+</view> -->
+<form bindsubmit="getFormId" report-submit='true'>
+  <button type="primary" bindtap="submit" formType="submit">确认授权</button>
+</form>

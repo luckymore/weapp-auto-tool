@@ -1,0 +1,12 @@
+<page title="神秘地带" background-color="#FFFFFF" custom-body-class="body">
+  <view class="container">
+    <view class="list">
+      <view class="list-item">
+        <text class="black">抱歉，请在内网环境中访问！</text>
+      </view>
+      <view class="list-item" bindtap="goHome">
+        切换后点击回首页:)
+      </view>
+    </view>
+  </view>
+</page>

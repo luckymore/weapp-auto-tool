@@ -1,0 +1,11 @@
+/* .k-p-weekly-form */
+.k-p-weekly-form .k-l-list__item::after {right:16px;}
+.k-p-weekly-form .k-l-list__item textarea {width:100%; height:100px;}
+.k-p-weekly-form_add-item {font-size:14px; color:#888; text-align:center;}
+.k-p-weekly-form_add-item::before {margin-right:4px; content:'\e90b'; font-family:'k-icon';}
+
+/* .k-p-weekly-form_add-attachment */
+.k-p-weekly-form_add-attachment::before {margin-right:4px; content:'\e90a'; font-family:'k-icon';}
+
+/* .k-p-weekly-view-history */
+.k-p-weekly-view-history {margin:32px auto; font-size:14px; color:#576b95; text-align:center;}

@@ -1,0 +1,14 @@
+<view class="k-l-list-title">姓名</view>
+<view class="k-l-list k-l-list_noactive">
+  <view class="k-l-list__item">
+    <input type="text" />
+    <icon type="clear" size="24" />
+  </view>
+</view>
+
+<view class="k-l-list-title">邮箱</view>
+<view class="k-l-list k-l-list_noactive">
+  <view class="k-l-list__item">
+    <input type="text" />
+  </view>
+</view>

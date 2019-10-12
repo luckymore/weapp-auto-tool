@@ -1,0 +1,12 @@
+<page title="神秘地带" background-color="#FFFFFF" custom-body-class="body">
+  <view class="container">
+    <view class="list">
+      <view class="list-item">
+        <text class="black">抱歉，您没有访问当前页面的权限！</text>
+      </view>
+      <view class="list-item" bindtap="goHome">
+        点击回首页看看吧:)
+      </view>
+    </view>
+  </view>
+</page>

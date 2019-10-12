@@ -1,0 +1,6 @@
+/* .k-p-profile */
+.k-p-profile {position:relative; padding:16px 16px 16px 96px; background:#fff;}
+.k-p-profile::after {z-index:9; content:''; position:absolute; bottom:0; left:0; right:0; border-bottom:1px solid #d5d5d5; -webkit-transform:scaleY(.5); -webkit-transform-origin:0 100%;}
+.k-p-profile .avatar {position:absolute; top:16px; left:16px; width:64px; height:64px; border-radius:5px; background-size:100% 100%;}
+.k-p-profile .nickname {font-size:20px; font-weight:bold;}
+.k-p-profile text {margin:8px 0; display:block; font-size:14px; color:#888; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}

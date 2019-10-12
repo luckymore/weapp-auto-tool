@@ -1,0 +1,10 @@
+<view class="k-l-empty" wx:if="{{success}}">
+  <view class="k-icon k-icon_smile-o" style="color:#fa9d3b;"></view>
+  <text>欢迎来到 Mi Staff</text>
+  <button type="primary" bindtap="goIndex">开始体验</button>
+</view>
+<view class="k-l-empty" wx:if="{{!success}}">
+  <icon type="warn" size="100"></icon>
+  <text>额，邀请链接已失效...</text>
+  <button type="primary" bindtap="goIndex">返回首页</button>
+</view>

@@ -1,0 +1,13 @@
+<block wx:if="{{listData.length>0}}">
+  <view class="k-l-list k-l-list_icon k-l-list_arrow" wx:for="{{listData}}" wx:for-item="item" wx:key="">
+    <navigator url="{{moduleItem.jump_info}}" class="k-l-list__item" wx:for="{{item.module_list}}" wx:for-item="moduleItem" wx:key="">
+    <view class="k-l-list__item_icon">
+      <view class="k-icon {{moduleItem.icon}}"></view>
+    </view>
+    <text>{{moduleItem.title}}</text>
+  </navigator>
+  </view>
+</block>
+
+<!-- 无任何权限 -->
+<view class="k-p-hope" wx:if="{{listData.length==0}}"></view>

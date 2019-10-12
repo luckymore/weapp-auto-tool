@@ -1,0 +1,47 @@
+<!-- <view class="k-l-list-title">管理员</view>
+<view class="k-l-list k-l-list_noactive">
+  <view class="k-l-list__item">
+    <text style="color:#09bb07;">管理员权限</text>
+    <switch checked />
+  </view>
+</view>
+
+<view class="k-l-list-title">舆情监控</view>
+<view class="k-l-list k-l-list_noactive">
+  <view class="k-l-list__item">
+    <text>允许访问</text>
+    <switch />
+  </view>
+  <view class="k-l-list__item">
+    <text>管理权限</text>
+    <switch />
+  </view>
+</view>
+<button type="primary">确定</button> -->
+
+<view wx:for="{{listData}}" wx:for-item="item" wx:key="index" wx:for-index="index">
+  <view class="k-l-list-title">
+    {{item.title}} </view>
+  <view class="k-l-list k-l-list_noactive">
+    <view class="k-l-list__item" wx:for="{{item.permission}}" wx:for-item="itemPer" wx:for-index="indexPer" wx:key="">
+      <text style="color:{{itemPer.perm==='manager'?'#09bb07':'#000'}};">{{itemPer.name}}</text>
+      <!-- <switch checked="{{itemPer.is_able}}" bindchange="switch1Change"  /> -->
+      <view class="radio  {{itemPer.is_able?'radio_on':''}}" data-module="{{index}}" data-per="{{indexPer}}" data-role="{{itemPer.perm}}"   bindtap="switch1Change" ></view>
+    </view>
+  </view>
+</view>
+
+<button type="primary" bindtap="confirm" >确认授权</button>
+
+
+<view class="k-l-bottom-dialog-overlay {{isWrap?'k-l-bottom-dialog-overlay_show':''}} "></view>
+<view class="k-l-bottom-dialog {{isWrap?'k-l-bottom-dialog-overlay_show':''}}">
+  <view class="k-l-bottom-dialog_x" bindtap="close"></view>
+  <view class="k-l-bottom-dialog__content">
+    <view class="k-p-auth-success">
+      <view></view>
+      <text>权限已经准备好，邀请朋友来体验吧</text>
+      <button type="primary" open-type="share">邀请用户</button>
+    </view>
+  </view>
+</view>

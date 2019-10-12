@@ -1,0 +1,19 @@
+<form bindsubmit="save">
+  <view class="k-l-list k-l-list_noactive k-p-word">
+    <view class="k-l-list__item">
+      <input type="text" placeholder="话题关键词" name="keywords" value="{{keywords}}" maxlength="15"  bindinput="onKeywordsInput" disabled="{{hasTopic}}" />
+       <!-- focus="{{isFocusedOnTheInputKeywords}}" -->
+    </view>
+    <view class="k-l-list__item" wx:for-items="{{relations}}" wx:key="{{item.id}}" data-id="{{item.id}}" >
+      <view class="del" data-index="{{index}}" bindtap="deleteRelation"></view>
+      <input type="text" placeholder="关联词" data-index="{{index}}" name="{{item.id}}" maxlength="15" value="{{item.value}}" bindinput="onRelationInput"  />
+       <!-- focus="{{item.focus}}" bindfocus="onRelationFocus" bindblur="onRelationBlur" -->
+    </view>
+    <view class="k-l-list__item">
+      <view class="k-p-add-subword-btn" bindtap="addRelation">添加关联词</view>
+    </view>
+  </view>
+
+  <button type="primary" form-type="submit" bindtap="verifyFileds">{{topicId ? '编辑话题' : '创建话题'}}</button>
+
+</form>

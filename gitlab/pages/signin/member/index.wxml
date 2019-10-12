@@ -1,0 +1,46 @@
+<view class="k-l-list-title">未签到</view>
+<view class="k-l-list k-l-list_noactive k-l-list_avatar">
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_avatar">
+      <image style="background-image:url();"></image>
+    </view>
+    <text>张三李四</text>
+  </view>
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_avatar">
+      <image style="background-image:url();"></image>
+    </view>
+    <text>张三李四</text>
+  </view>
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_avatar">
+      <image style="background-image:url();"></image>
+    </view>
+    <text>张三李四</text>
+  </view>
+</view>
+
+<view class="k-l-list-title">已签到</view>
+<view class="k-l-list k-l-list_arrow k-l-list_avatar">
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_avatar">
+      <image style="background-image:url();"></image>
+    </view>
+    <text>张三李四</text>
+    <label>12:01</label>
+  </view>
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_avatar">
+      <image style="background-image:url();"></image>
+    </view>
+    <text>张三李四</text>
+    <label>12:03</label>
+  </view>
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_avatar">
+      <image style="background-image:url();"></image>
+    </view>
+    <text>张三李四</text>
+    <label>13:01</label>
+  </view>
+</view>

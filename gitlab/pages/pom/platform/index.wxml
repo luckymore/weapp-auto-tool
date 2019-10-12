@@ -1,0 +1,47 @@
+<view class="k-p-summary">
+
+  <view class="k-p-summary_keyword">
+    <view class="word word_weibo">
+      <text>{{keywords}}</text>
+    </view>
+    <picker class="time" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiPickers}}" range-key="value">
+      <text>{{multiPickers[0][multiIndex[0]].value}} {{multiPickers[1][multiIndex[1]].value}}</text>
+      <view></view>
+    </picker>
+  </view>
+
+  <view class="k-p-summary_info">
+    <view class="hot">{{popularIndex}}</view>
+    <view class="info">
+      <view class="trend" wx:if="{{upTo-0 > 0}}">{{upTo}}</view>
+      <view class="trend trend_down" wx:else>{{-upTo}}</view>
+      <view class="yes">{{like}}</view>
+      <view class="no">{{unlike}}</view>
+    </view>
+  </view>
+
+</view>
+
+<view class="k-l-list k-l-list_through k-p-content">
+  <view class="k-l-list__item" wx:for-items="{{items}}" wx:key="{{index}}">
+    <view class="avatar" style="background-image:url({{item.avator}});"></view>
+    <view class="type {{item.status === 'like'?'type_yes':''}}{{item.status === 'unlike'?'type_no':''}}"></view>
+    <view class="nickname">{{item.userName}}</view>
+    <view class="content">
+      <text>{{item.content}}</text>
+      <!-- <view class="pic">
+        
+      </view> -->
+    </view>
+    <view class="bot">
+      <text>{{item.time}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="k-w-loading" style="{{isLoadingData ? '' : 'display:none;'}}">
+  <view>
+    <view></view>
+    <text>加载中...</text>
+  </view>
+</view>

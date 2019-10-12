@@ -1,0 +1,7 @@
+@import '/pages/user/auth/index.wxss';
+
+/* .k-p-auth-success */
+.k-p-auth-success {padding:64px 0; text-align:center;}
+.k-p-auth-success view {margin:0 auto; width:64px; height:64px; line-height:64px; overflow:hidden;}
+.k-p-auth-success view::before {content:'\e90d'; font-family:'k-icon'; font-size:64px; color:#09bb07;}
+.k-p-auth-success text {display:block; margin:32px auto; font-size:16px; color:#888;}

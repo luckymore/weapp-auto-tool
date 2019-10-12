@@ -1,0 +1,91 @@
+<!-- <view class="k-l-empty k-l-empty_info">
+  <icon type="info" size="100"></icon>
+  <text>未到签到时间</text>
+</view> -->
+
+<!-- <view class="k-l-empty k-l-empty_info">
+  <icon type="info" size="100"></icon>
+  <text>请到达会场后签到</text>
+</view> -->
+
+<block>
+  <view class="k-p-signin-info">
+    <view class="topic">
+      <text>互联网部门拉通会\n第三期</text>
+    </view>
+    <view class="info">
+      <view>
+        <label>主办部门：</label>
+        <text>集团参谋部</text>
+      </view>
+      <view>
+        <label>会议时间：</label>
+        <text>10.19(六) 13:00-19:00</text>
+      </view>
+      <view>
+        <label>签到时间：</label>
+        <text>10.19(六) 12:00-14:00</text>
+      </view>
+      <view>
+        <label>会议议程：</label>
+        <text class="textgroup">
+          <text>会议议程第一项...\n会议议程第一项...</text>
+          <text>会议议程第二项...</text>
+          <text>会议议程第三项...</text>
+          <text>会议议程第四项...</text>
+        </text>
+      </view>
+    </view>
+  </view>
+
+  <view class="k-l-list k-l-list_arrow">
+    <navigator url="/pages/signin/member/index" class="k-l-list__item">
+      <text>签到管理</text>
+    </navigator>
+  </view>
+
+  <!-- <button type="primary">签到</button> -->
+
+  <button disabled type="primary">您已签到</button>
+  <navigator class="btn-sub" url="/pages/signin/rank/index">已有12人签到</navigator>
+
+  <!-- <view class="k-l-bottom-dialog-overlay k-l-bottom-dialog-overlay_show"></view>
+  <view class="k-l-bottom-dialog k-l-bottom-dialog_show">
+    <view class="k-l-bottom-dialog_x"></view>
+    <view class="k-l-bottom-dialog__header">请在名单中选择您的姓名</view>
+    <view class="k-l-bottom-dialog__content">
+      <view class="k-l-list-title">未签到</view>
+      <view class="k-l-list k-p-name-list">
+        <radio-group>
+          <view class="k-l-list__item">
+            <text>张三<text>zhangsan</text></text>
+            <radio></radio>
+          </view>
+          <view class="k-l-list__item">
+            <text>张三<text>zhangsan</text></text>
+            <radio></radio>
+          </view>
+          <view class="k-l-list__item">
+            <text>张三<text>zhangsan</text></text>
+            <radio></radio>
+          </view>
+        </radio-group>
+      </view>
+      <view class="k-l-list-title">已签到</view>
+      <view class="k-l-list k-p-name-list">
+        <view class="k-l-list__item">
+          <text>张三<text>zhangsan</text></text>
+        </view>
+        <view class="k-l-list__item">
+          <text>张三<text>zhangsan</text></text>
+        </view>
+        <view class="k-l-list__item">
+          <text>张三<text>zhangsan</text></text>
+        </view>
+      </view>
+    </view>
+    <view class="k-l-bottom-dialog__footer">
+      <button type="primary">签到</button>
+    </view>
+  </view> -->
+</block>

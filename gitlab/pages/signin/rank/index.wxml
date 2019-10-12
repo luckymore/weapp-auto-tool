@@ -1,0 +1,23 @@
+<view class="k-l-list k-l-list_avatar">
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_avatar">
+      <image style="background-image:url();"></image>
+    </view>
+    <text>张三李四</text>
+    <label>12:01</label>
+  </view>
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_avatar">
+      <image style="background-image:url();"></image>
+    </view>
+    <text>张三李四</text>
+    <label>12:03</label>
+  </view>
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_avatar">
+      <image style="background-image:url();"></image>
+    </view>
+    <text>张三李四</text>
+    <label>13:01</label>
+  </view>
+</view>

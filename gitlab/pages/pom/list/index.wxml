@@ -1,0 +1,25 @@
+<view class="k-l-list k-p-rank" wx:if="{{items.length || stickies.length}}">
+
+  <view class="k-l-list__item k-l-list__item_gray" wx:if="{{stickies.length}}" wx:for-items="{{stickies}}" wx:key="{{item.id}}" wx:for-item="item" data-id="{{item.id}}" data-index="{{index}}">
+    <view class="k-p-rank__item">
+      <text class="i i_sticktop"></text>
+      <view class="keyword">{{item.keywords}}</view>
+      <view class="icon" bindtap="toggleStatus" data-index="{{index}}" data-id="{{item.id}}" data-source="stickies" data-is-hidden="{{item.isHidden ? 1 : 0}}">{{item.isHidden ? '显示': '隐藏'}}</view>
+      <view class="mask {{item.bubbleIsVisible?'mask_showed':''}}" data-id="{{item.id}}" data-source="stickies" catchtap="togglePopBubble" data-index="{{index}}"></view>
+    </view>
+  </view>
+
+  <view class="k-l-list__item" wx:for-items="{{items}}" wx:key="{{item.id}}" wx:for-item="item" data-id="{{item.id}}" data-source="items" data-index="{{index}}">
+    <view class="k-p-rank__item">
+      <text class="i {{index+1<4 ? 'i_top3' : ''}}">{{index+1}}</text>
+      <view class="keyword">{{item.keywords}}</view>
+      <view class="icon" bindtap="toggleStatus" data-index="{{index}}" data-id="{{item.id}}" data-source="items" data-is-hidden="{{item.isHidden ? 1 : 0}}">{{item.isHidden ? '显示': '隐藏'}}</view>
+      <view class="mask {{item.bubbleIsVisible?'mask_showed':''}}" data-id="{{item.id}}" data-source="stickies" catchtap="togglePopBubble" data-index="{{index}}"></view>
+    </view>
+  </view>
+</view>
+
+<view class="k-l-empty" wx:if="{{items.length==0&&stickies.length==0}}">
+  <icon type="info" size="100"></icon>
+  <text>没有隐藏的条目</text>
+</view>

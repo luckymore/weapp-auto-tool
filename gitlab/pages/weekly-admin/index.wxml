@@ -1,0 +1,18 @@
+<view class="k-l-list-title">2019 W36 周报 9.9-9.15</view>
+<view class="k-l-list k-l-list_avatar">
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_avatar" style="background-image:url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/976c2e317666428755c4a6641caef47f.jpeg);"></view>
+    <text>张三李四</text>
+    <text class="status">9.15 08:35 提交</text>
+  </view>
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_avatar" style="background-image:url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/976c2e317666428755c4a6641caef47f.jpeg);"></view>
+    <text>张三李四</text>
+    <text class="status">9.16 10:20 修改</text>
+  </view>
+  <view class="k-l-list__item">
+    <view class="k-l-list__item_avatar" style="background-image:url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/976c2e317666428755c4a6641caef47f.jpeg);"></view>
+    <text>张三李四</text>
+    <text class="status status_n">未提交</text>
+  </view>
+</view>

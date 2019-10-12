@@ -1,0 +1,62 @@
+<view class="k-p-attachment-list">
+  <view>
+    <block wx:for="{{files}}" wx:key="{{item.path}}">
+      <!-- 图片 -->
+      <view
+        wx:if="{{item.type === 'img'}}"
+        class="pic {{item.loading ? 'loading' : ''}}"
+        data-index="{{index}}"
+        data-id="{{item.attach_id}}"
+        data-dialog="del"
+        bind:tap="handlePreview"
+        bind:longpress="handleShowDialog"
+      >
+        <image class="img-item" mode="aspectFit" src="{{item.path}}" />
+      </view>
+
+      <!-- 文件 -->
+      <view
+        wx:else
+        class="file {{item.loading ? 'loading' : ''}} file_{{item.type}}"
+        data-index="{{index}}"
+        data-id="{{item.attach_id}}"
+        data-dialog="del"
+        bind:tap="handlePreview"
+        bind:longpress="handleShowDialog"
+      >
+        <view><text>{{item.name}}</text></view>
+      </view>
+    </block>
+    <view wx:if="{{isPreview != 1 && files.length < 9}}" class="add" data-dialog="add" bind:tap="handleShowDialog"></view>
+  </view>
+</view>
+
+<button disabled="{{uploading}}" type="primary" bind:tap="handleBack">确定</button>
+
+<block wx:if="{{dialog}}">
+  <view class="k-l-dialog-overlay k-l-dialog-overlay_show" bind:tap="handleCloseDialog"></view>
+  <view class="k-l-dialog k-l-dialog_show" bind:tap="handleCloseDialog">
+    <!-- 上传 -->
+    <view wx:if="{{dialog === 'add'}}" class="k-l-list k-l-list_through">
+      <view class="k-l-list__item" bind:tap="chooseImage">
+        <text>上传图片</text>
+      </view>
+      <view class="k-l-list__item" bind:tap="chooseMessageFile">
+        <text>上传文件</text>
+        <text style="position:absolute;top:50%;right:16px;font-size:12px;color:#888;-webkit-transform:translate(0, -50%);transform:translate(0, -50%);">
+          word/excel/ppt/pdf
+        </text>
+      </view>
+    </view>
+
+    <!-- 删除 -->
+    <view wx:if="{{dialog === 'del'}}" class="k-l-list k-l-list_through">
+      <view wx:if="{{isPreview != 1}}" class="k-l-list__item" bind:tap="handleDelAttach">
+        <text>删除</text>
+      </view>
+      <view class="k-l-list__item" bind:tap="handleSaveFile">
+        <text>下载</text>
+      </view>
+    </view>
+  </view>
+</block>

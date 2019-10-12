@@ -14,9 +14,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "adm-zip": "^0.4.13",
     "axios": "^0.18.0",
     "element-ui": "^2.4.4",
     "fs": "0.0.1-security",
+    "gunzip-maybe": "^1.4.1",
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
@@ -24,6 +26,9 @@
     "less": "^3.7.1",
     "less-loader": "^4.1.0",
     "path": "^0.12.7",
+    "simple-git": "^1.126.0",
+    "tar": "^5.0.5",
+    "tar-stream": "^2.1.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

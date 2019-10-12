@@ -1,0 +1,51 @@
+<view class="k-p-summary">
+
+  <view class="k-p-summary_keyword">
+    <view class="word" bindtap="showDetail">
+      <text>{{keywords}}</text>
+      <view></view>
+    </view>
+    <picker class="time" bindchange="bindPickerChange" value="{{pickerIndex}}" range-key="value" range="{{periods}}">
+      <text>{{periods[pickerIndex].value}}</text>
+      <view></view>
+    </picker>
+  </view>
+
+  <view class="k-p-summary_info">
+    <view class="hot">{{popularIndex}}</view>
+    <view class="info">
+      <view class="trend" wx:if="{{upTo-0 > 0}}">{{upTo}}</view>
+      <view class="trend trend_down" wx:else>{{-upTo}}</view>
+      <view class="yes">{{like||0}}</view>
+      <view class="no">{{unlike||0}}</view>
+    </view>
+  </view>
+
+</view>
+
+<view class="k-l-list k-l-list_icon">
+  <view class="k-l-list__item" wx:if="{{weibo}}" data-platform="weibo" bindtap="navigateToComments">
+    <view class="k-l-list__item_icon" style="background-image:url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9fb889f9ab62f56837b22987eb6e6b04.png);"></view>
+    <text>微博</text>
+    <view class="k-p-list-info">
+      <view class="hot">{{weibo.popularIndex}}</view>
+      <view class="yes">{{weibo.like || 0}}</view>
+    </view>
+  </view>
+  <view class="k-l-list__item" wx:if="{{baidu}}" hidden>
+    <view class="k-l-list__item_icon" style="background-image:url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0a83f14bf5e88130d1f57b47935748ca.png);"></view>
+    <text>百度</text>
+    <view class="k-p-list-info">
+      <view class="hot">{{baidu.popularIndex}}</view>
+      <view class="yes">{{baidu.like || 0}}</view>
+    </view>
+  </view>
+  <!-- <view class="k-l-list__item">
+    <view class="k-l-list__item_icon" style="background-image:url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8cd2f942f4c66437343469c7f3dfa358.png);"></view>
+    <text>抖音</text>
+    <view class="k-p-list-info">
+      <view class="hot">37234</view>
+      <view class="yes">65%</view>
+    </view>
+  </view> -->
+</view>

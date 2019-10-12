@@ -1,0 +1,25 @@
+<block wx:if="{{visitor_list.length>0}}">
+  <view class="k-l-list-title">访客</view>
+  <view class="k-l-list k-l-list_avatar">
+    <!-- <scroll-view bindscrolltolower="addVisitor" class="userWrap" style="max-height:{{userHeight}}px" scroll-y> -->
+    <navigator url="/pages/user/detail/index?id={{item.UserID}}" class="k-l-list__item" wx:for="{{visitor_list}}" wx:for-item="item" wx:key="index">
+      <view class="k-l-list__item_avatar" style="background-image:url({{item.avatar}});"></view>
+      <text>{{item.name}}</text>
+    </navigator>
+    <!-- </scroll-view> -->
+  </view>
+</block>
+<block wx:if="{{user_list.length>0}}">
+  <view class="k-l-list-title">用户</view>
+  <view class="k-l-list k-l-list_avatar" wx:if="{{user_list.length>0}}">
+    <!-- <scroll-view  class="visitorWrap" style="max-height:{{visitorHeight}}px" scroll-y  bindscrolltolower="addUser"> -->
+    <navigator url="/pages/user/detail/index?id={{item.UserID}}" class="k-l-list__item" wx:for="{{user_list}}" wx:for-item="item" wx:key="index">
+      <view class="k-l-list__item_avatar">
+        <image style="background-image:url({{item.avatar}});"></image>
+      </view>
+      <text>{{item.name}}</text>
+      <label wx:if="{{item.is_admin}}">Admin</label>
+    </navigator>
+    <!-- </scroll-view> -->
+  </view>
+</block>

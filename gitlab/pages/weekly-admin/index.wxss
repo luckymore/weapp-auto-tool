@@ -1,0 +1,2 @@
+.k-l-list .k-l-list__item .status {position:absolute; top:50%; right:16px; font-size:12px; color:#888; -webkit-transform:translate(0, -50%); transform:translate(0, -50%);}
+.k-l-list .k-l-list__item .status_n {color:#e64340;}

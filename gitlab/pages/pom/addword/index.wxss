@@ -1,0 +1,10 @@
+/* .k-p-word */
+.k-p-word .k-l-list__item input {margin-left:16px; width:260px; height:22px; font-size:14px;}
+.k-p-word .k-l-list__item:first-child input {margin-left:0; font-size:16px;}
+.k-p-word .k-l-list__item .del {position:absolute; top:50%; right:0; width:48px; height:100%; line-height:54px; text-align:center; -webkit-transform:translate(0, -50%); transform:translate(0, -50%); overflow:hidden;}
+.k-p-word .k-l-list__item .del:active {background:#ededed;}
+.k-p-word .k-l-list__item .del::before {content:'\e916'; font-family:'k-icon'; color:#e64340;}
+
+/* .k-p-add-subword-btn */
+.k-p-add-subword-btn {font-size:14px; color:#888; text-align:center;}
+.k-p-add-subword-btn::before {content:'\e918'; font-family:'k-icon'; margin-right:4px;}

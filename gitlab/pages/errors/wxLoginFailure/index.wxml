@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="list">
+    <view class="list-item">
+      <text class="black">亲，登录失败了</text>
+    </view>
+    <view class="list-item" bindtap="reLogin">
+      请点击重试:)
+    </view>
+  </view>
+</view>

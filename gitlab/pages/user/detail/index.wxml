@@ -1,0 +1,15 @@
+<view class="k-p-profile">
+  <view class="avatar" style="background-image:url({{data.avatar}});"></view>
+  <view class="nickname">{{data.name}}</view>
+  <text>openID：{{openId}}</text>
+  <text>最后登录：{{data.last_log_time}}</text>
+</view>
+
+<view class="k-l-list k-l-list_arrow">
+  <navigator url="/pages/user/remark/index" class="k-l-list__item" hidden>
+    <text>设置备注和标签</text>
+  </navigator>
+  <navigator url="/pages/user/auth/index?id={{id}}&name={{data.name}}" class="k-l-list__item">
+    <text>分配权限</text>
+  </navigator>
+</view>
